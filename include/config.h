@@ -1,0 +1,5 @@
+#pragma once
+
+#define MATRIX_DIMENSIONS 100
+#define ALLOC_ITER 100000
+#define ALLOC_OVERFLOW_ITER 130000
