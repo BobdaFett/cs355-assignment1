@@ -11,9 +11,9 @@ void ProblemTwo::run() {
     double heapTime = multiplyHeap();
     double staticTime = multiplyStatic();
 
-    std::cout << "Total time for stack multiplication:  " << stackTime << " seconds" << std::endl;
-    std::cout << "Total time for heap multiplication:   " << heapTime << " seconds" << std::endl;
-    std::cout << "Total time for static multiplication: " << staticTime << " seconds" << std::endl;
+    std::cout << "\tTotal time for stack multiplication:  " << stackTime << " seconds" << std::endl;
+    std::cout << "\tTotal time for heap multiplication:   " << heapTime << " seconds" << std::endl;
+    std::cout << "\tTotal time for static multiplication: " << staticTime << " seconds" << std::endl;
 }
 
 double ProblemTwo::multiplyStack() {

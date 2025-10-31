@@ -3,6 +3,7 @@ add_executable(cs355_assignment1
     problemOne.cpp
     problemTwo.cpp
     problemThree.cpp
+    problemFour.cpp
 )
 
 target_include_directories(cs355_assignment1 PRIVATE

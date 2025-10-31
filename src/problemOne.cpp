@@ -46,9 +46,9 @@ void ProblemOne::runA(int numIter) {
     staticThread.join();
 
     // Convert all units to seconds and display in a table.
-    std::cout << "Total time for stack execution:  " << stackTime << " seconds" << std::endl;
-    std::cout << "Total time for heap execution:   " << heapTime << " seconds" << std::endl;
-    std::cout << "Total time for static execution: " << staticTime << " seconds" << std::endl;
+    std::cout << "\tTotal time for stack execution:  " << stackTime << " seconds" << std::endl;
+    std::cout << "\tTotal time for heap execution:   " << heapTime << " seconds" << std::endl;
+    std::cout << "\tTotal time for static execution: " << staticTime << " seconds" << std::endl;
 }
 
 void ProblemOne::runB(int numIterations) {
