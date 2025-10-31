@@ -5,6 +5,7 @@
 #include "problemThree.h"
 #include "problemFour.h"
 #include "problemFive.h"
+#include "problemSix.h"
 #include "config.h"
 
 int main() {
@@ -31,6 +32,10 @@ int main() {
 
     std::cout << "Running problem 5 code - operand evaluation order" << std::endl;
     ProblemFive::run();
+    std::cout << "\n";
+
+    std::cout << "Running problem 6 code - argument evaluation order" << std::endl;
+    ProblemSix::run();
     std::cout << "\n";
 
     return 0;

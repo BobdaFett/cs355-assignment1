@@ -8,7 +8,10 @@ public:
     static void run();
 
 protected:
-    static void blah();
+    static int a();
+    static int b();
+    static int f(int a, int b);
+    static int g(int a, int b, int c);
 };
 
 #endif
