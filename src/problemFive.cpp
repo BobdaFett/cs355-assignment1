@@ -9,10 +9,13 @@ void ProblemFive::run() {
     std::cout << "\tChecking evaluation order of equation a + (a / b):" << std::endl;
     result = a() + (a() / b());
 
-    std::cout << "\tChecking evaluation order of equation (b + a) / (b + (a + a)):" << std::endl;
-    result = (b() + a()) / (b() + (a() + a()));
+    std::cout << "\tChecking evaluation order of condition b < a:" << std::endl;
+    bool bResult = b() < a();
 
-    std::cout << "\tChecking evaluation order of f(a, b):" << std::endl;
+    std::cout << "\tChecking evaluation order of condition b || a:" << std::endl;
+    bResult = b() || a();
+
+    std::cout << "\tChecking evaluation order of f(a, b) -> b + a:" << std::endl;
     result = f(a(), b());
 }
 
@@ -28,5 +31,5 @@ int ProblemFive::b() {
 
 int ProblemFive::f(int a, int b) {
     std::cout << "\t\tEvaluated f" << std::endl;
-    return a + b;
+    return b + a;
 }
