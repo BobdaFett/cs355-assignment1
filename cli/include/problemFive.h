@@ -13,6 +13,6 @@ protected:
     static int a();
     static int b();
     static int f(int a, int b);
-}
+};
 
 #endif

@@ -1,7 +1,10 @@
 if (MSVC)
     add_executable(cs355_assignment1_clr main.cpp
             include/problemThree.h
-            problemThree.cpp)
+            problemThree.cpp
+            problemFive.cpp
+            problemSix.cpp
+    )
     
     # Prevent linking native runtime
     set_target_properties(cs355_assignment1_clr PROPERTIES

@@ -1,6 +1,8 @@
 #include <iostream>
 
 #include "problemThree.h"
+#include "problemFive.h"
+#include "problemSix.h"
 
 using namespace System;
 
