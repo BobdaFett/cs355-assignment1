@@ -7,5 +7,5 @@ add_executable(cs355_assignment1
 )
 
 target_include_directories(cs355_assignment1 PRIVATE
-    ${CMAKE_SOURCE_DIR}/include
+    ${CMAKE_SOURCE_DIR}/src/include
 )

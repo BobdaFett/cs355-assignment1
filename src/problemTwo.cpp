@@ -7,9 +7,9 @@
 #include "config.h"
 
 void ProblemTwo::run() {
-    double stackTime = multiplyStack();
-    double heapTime = multiplyHeap();
-    double staticTime = multiplyStatic();
+    const double stackTime = multiplyStack();
+    const double heapTime = multiplyHeap();
+    const double staticTime = multiplyStatic();
 
     std::cout << "\tTotal time for stack multiplication:  " << stackTime << " seconds" << std::endl;
     std::cout << "\tTotal time for heap multiplication:   " << heapTime << " seconds" << std::endl;
@@ -35,7 +35,7 @@ double ProblemTwo::multiplyStack() {
     int result[MATRIX_DIMENSIONS][MATRIX_DIMENSIONS];
 
     // Multiply matrices together
-    clock_t start = clock();
+    const clock_t start = clock();
     for (int row = 0; row < MATRIX_DIMENSIONS; row++) {
         for (int col = 0; col < MATRIX_DIMENSIONS; col++) {
             for (int i = 0; i < MATRIX_DIMENSIONS; i++) {
@@ -43,9 +43,9 @@ double ProblemTwo::multiplyStack() {
             }
         }
     }
-    clock_t end = clock();
+    const clock_t end = clock();
 
-    return (double)(end - start) / CLOCKS_PER_SEC;
+    return static_cast<double>(end - start) / CLOCKS_PER_SEC;
 }
 
 double ProblemTwo::multiplyHeap() {
@@ -74,7 +74,7 @@ double ProblemTwo::multiplyHeap() {
     }
 
     // Multiply matrices together
-    clock_t start = clock();
+    const clock_t start = clock();
     for (int row = 0; row < MATRIX_DIMENSIONS; row++) {
         for (int col = 0; col < MATRIX_DIMENSIONS; col++) {
             for (int i = 0; i < MATRIX_DIMENSIONS; i++) {
@@ -82,7 +82,7 @@ double ProblemTwo::multiplyHeap() {
             }
         }
     }
-    clock_t end = clock();
+    const clock_t end = clock();
 
     // Delete all arrays to save memory
     for (int i = 0; i < MATRIX_DIMENSIONS; i++) {
@@ -94,7 +94,7 @@ double ProblemTwo::multiplyHeap() {
     delete[] arrTwo;
     delete[] result;
 
-    return (double)(end - start) / CLOCKS_PER_SEC;
+    return static_cast<double>(end - start) / CLOCKS_PER_SEC;
 }
 
 double ProblemTwo::multiplyStatic() {
@@ -115,7 +115,7 @@ double ProblemTwo::multiplyStatic() {
     static int result[MATRIX_DIMENSIONS][MATRIX_DIMENSIONS];
 
     // Multiply matrices together
-    clock_t start = clock();
+    const clock_t start = clock();
     for (int row = 0; row < MATRIX_DIMENSIONS; row++) {
         for (int col = 0; col < MATRIX_DIMENSIONS; col++) {
             for (int i = 0; i < MATRIX_DIMENSIONS; i++) {
@@ -123,7 +123,7 @@ double ProblemTwo::multiplyStatic() {
             }
         }
     }
-    clock_t end = clock();
+    const clock_t end = clock();
 
-    return (double)(end - start) / CLOCKS_PER_SEC;
+    return static_cast<double>(end - start) / CLOCKS_PER_SEC;
 }

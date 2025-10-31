@@ -28,15 +28,15 @@ void ProblemFour::run() {
 double ProblemFour::accessSubscript() {
     int arr[MATRIX_DIMENSIONS][MATRIX_DIMENSIONS];
 
-    clock_t start = clock();
+    const clock_t start = clock();
     for (int i = 0; i < MATRIX_DIMENSIONS; i++) {
         for (int j = 0; j < MATRIX_DIMENSIONS; j++) {
             int val = arr[i][j];
         }
     }
-    clock_t end = clock();
+    const clock_t end = clock();
 
-    return (double)(end - start) / CLOCKS_PER_SEC;
+    return static_cast<double>(end - start) / CLOCKS_PER_SEC;
 }
 
 double ProblemFour::accessPointer() {
@@ -44,12 +44,12 @@ double ProblemFour::accessPointer() {
 
     int* pIter = &arr[0][0];
 
-    clock_t start = clock();
+    const clock_t start = clock();
     for (int i = 0; i < MATRIX_DIMENSIONS * MATRIX_DIMENSIONS; i++) {
         int val = *pIter;
         pIter++;
     }
-    clock_t end = clock();
+    const clock_t end = clock();
 
-    return (double)(end - start) / CLOCKS_PER_SEC;
+    return static_cast<double>(end - start) / CLOCKS_PER_SEC;
 }

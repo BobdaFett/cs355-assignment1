@@ -57,20 +57,28 @@ void ProblemThree::testSwitch() {
 
     switch (testOne) {
         case TestingEnumOne::IndexTwo:
-            std::cout << "\tSuccess! This is the expected value." << std::endl;
+            std::cout << "\tFound TestingEnumOne::IndexTwo" << std::endl;
             break;
         default:
             std::cout << "\tValue was incorrect." << std::endl;
             break;
     }
 
-    switch (testOne) {
-        case TestingEnumTwo::NumberOne:
-            std::cout << "\tFound TestingEnumTwo::NumberOne from a TestingEnumOne::IndexTwo." << std::endl;
-            std::cout << "\tThis was expected, but implicit and unsafe." << std::endl;
+    switch (testTwo) {
+        case TestingEnumOne::IndexOne:
+            std::cout << "\tFound TestEnumClass::IndexOne" << std::endl;
+            break;
+        case TestingEnumOne::IndexTwo:
+            std::cout << "\tFound TestEnumClass::IndexTwo" << std::endl;
+            break;
+        case TestingEnumOne::IndexThree:
+            std::cout << "\tFound TestEnumClass::IndexThree" << std::endl;
+            break;
+        case TestingEnumOne::IndexFour:
+            std::cout << "\tFound TestEnumClass::IndexFour" << std::endl;
             break;
         default:
-            std::cout << "\tCouldn't find the expected value." << std::endl;
+            std::cout << "\tFound an undefined enum value. This would be very unsafe." << std::endl;
             break;
     }
 
