@@ -3,13 +3,13 @@
 #include <iostream>
 
 void ProblemSix::run() {
-    std::cout << "Checking evaluation of call f(a, b):" << std::endl;
+    std::cout << "\tChecking evaluation of call f(a, b):" << std::endl;
     f(a(), b());
 
-    std::cout << "Checking evaluation of call g(a, b, b):" << std::endl;
+    std::cout << "\tChecking evaluation of call g(a, b, b):" << std::endl;
     g(a(), b(), b());
 
-    std::cout << "Checking evaluation of call g(a, f(a, b), b):" << std::endl;
+    std::cout << "\tChecking evaluation of call g(a, f(a, b), b):" << std::endl;
     g(a(), f(a(), b()), b());
 }
 

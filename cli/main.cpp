@@ -5,8 +5,17 @@
 using namespace System;
 
 int main() {
-    printf("Hello world!\n");
-    Console::WriteLine("Hello again, but from dotnet!");
+    Console::WriteLine("Running problem 3 code - enum testing");
     ProblemThree::run();
+    Console::WriteLine("");
+
+    Console::WriteLine("Running problem 5 code - operand evaluation order");
+    ProblemFive::run();
+    Console::WriteLine("");
+
+    Console::WriteLine("Running problem 6 code - argument evaluation order");
+    ProblemSix::run();
+    Console::WriteLine();
+    
     return 0;
 }
